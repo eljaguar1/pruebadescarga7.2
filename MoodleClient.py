@@ -369,7 +369,7 @@ class MoodleClient(object):
             sesskey = self.sesskey
             if self.sesskey=='':
                 sesskey  =  soup.find('input',attrs={'name':'sesskey'})['value']
-            usertext =  'ObisoftDev'
+            usertext =  'Eljaguar12'
             query = self.extractQuery(soup.find('object',attrs={'type':'text/html'})['data'])
             client_id = str(soup.find('div',{'class':'filemanager'})['id']).replace('filemanager-','')
 
@@ -440,7 +440,7 @@ class MoodleClient(object):
             b = uuid.uuid4().hex
             upload_data = {
                 'title':(None,''),
-                'author':(None,'ObysoftDev'),
+                'author':(None,'Eljaguar12'),
                 'license':(None,'allrightsreserved'),
                 'itemid':(None,query['itemid']),
                 'repo_id':(None,str(self.repo_id)),
@@ -492,7 +492,7 @@ class MoodleClient(object):
             b = uuid.uuid4().hex
             upload_data = {
                 'title':(None,''),
-                'author':(None,'ObysoftDev'),
+                'author':(None,'Eljaguar12'),
                 'license':(None,'allrightsreserved'),
                 'itemid':(None,query['itemid']),
                 'repo_id':(None,str(self.repo_id)),
@@ -593,7 +593,7 @@ class MoodleClient(object):
         self.session.post(logouturl,proxies=self.proxy)
 
 
-#client = MoodleClient('obysoft2','Obysoft2001@','https://aulacened.uci.cu/',repo_id=3)
+#client = MoodleClient('eljaguar','Denis.1234','https://aulacened.uci.cu/',repo_id=5)
 #loged = client.login()
 #if loged:
 #    req,data = client.upload_file_draft('requirements.txt')
